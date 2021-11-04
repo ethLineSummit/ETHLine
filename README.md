@@ -8,7 +8,7 @@
 
 
 
-> With EthLine App, it is an encrypted real-time communication software, it is based on Ethereum ERC20 SECP256K1 to achieve end-to-end encryption, it can deliver messages on time, safely and free of charge 
+> With EthLine App, it is an encrypted real-time communication software, it is based on [Ethereum](https://github.com/ethereum) ERC20 SECP256K1 to achieve end-to-end encryption, it can deliver messages on time, safely and free of charge 
 > * Data charges may apply. Contact your provider for details.
 >
 
@@ -175,6 +175,108 @@
 ![image-20211104143013852](assets/images/README/image-20211104143013852.png)
 
 
+
+
+
+
+
+
+
+### Step 6: Connect to RPC server
+
+> By default, the app will not establish a connection with the RPC server. If you want to establish a connection with the server, you must first turn on the switch
+
+
+
+![image-20211104161204920](assets/images/README/image-20211104161204920.png)
+
+
+
+> - You can monitor the network connection status between the app and the server in the personal center in real time
+> - You can also customize the rpc server address, please do not connect to untrusted rpc nodes easily
+
+
+
+
+
+![image-20211104161229725](assets/images/README/image-20211104161229725.png)
+
+
+
+
+
+![image-20211104161250691](assets/images/README/image-20211104161250691.png)
+
+
+
+### Step 7 : Start live chat
+
+> - Here, you can see all the wallet addresses that are connected to the current RPC node and their broadcast names
+> - When you send a message with one of the wallet addresses, it is encrypted end-to-end, and only you and him can unlock this encrypted message
+
+
+
+
+
+![image-20211104161758726](assets/images/README/image-20211104161758726.png)
+
+
+
+![image-20211104161914874](assets/images/README/image-20211104161914874.png)
+
+
+
+![image-20211104161931418](assets/images/README/image-20211104161931418.png)
+
+
+
+![image-20211104161946977](assets/images/README/image-20211104161946977.png)
+
+
+
+
+
+![image-20211104162034520](assets/images/README/image-20211104162034520.png)
+
+
+
+![image-20211104162109998](assets/images/README/image-20211104162109998.png)
+
+
+
+
+
+![image-20211104162204795](assets/images/README/image-20211104162204795.png)
+
+
+
+![image-20211104162712090](assets/images/README/image-20211104162712090.png)
+
+
+
+### Lock Account
+
+> After the account is locked, the APP can be unlocked again with the login password in a short time
+
+
+
+![image-20211104143942904](assets/images/README/image-20211104143942904.png)
+
+
+
+### Exit Account
+
+> After you log out of your account, you need to enter the mnemonic phrase to enter the APP again
+
+![image-20211104144535515](assets/images/README/image-20211104144535515.png)
+
+
+
+
+
+## ✨ Deploy ETH Line Node
+
+> If you want to deploy a set of your own `ETH Line Node`, please read the documentation carefully, it may be a bit complicated, but it is simple.
 
 
 
