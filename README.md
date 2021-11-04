@@ -282,7 +282,17 @@
 
 
 
-## 🎉 License
+## 📝 License
 
 ![2021-11-4 010925](assets/images/README/2021-11-04010925.svg)  [MIT LICENSE](./LICENSE)
+
+
+
+
+
+## 🤝 Contributing
+
+> Email : [ethLineSummit@outlook.com](mailto:ethLineSummit@outlook.com)
+>
+> Contributions, issues and feature requests are welcome in both projects. Feel free to check the [issues page](https://github.com/ethLineSummit/ETHLine/issues) if you would like to contribute.
 
