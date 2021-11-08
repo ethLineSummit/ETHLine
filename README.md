@@ -14,8 +14,7 @@
 
 
 
-
-![2021-11-4 010057](assets/images/README/2021-11-04010057.svg)  ![2021-11-4 010206](assets/images/README/2021-11-04010206.svg)  ![2021-11-4 010317](assets/images/README/2021-11-04010317.svg)
+![2021-11-4 010057](assets/images/README/20211109065920.svg)  ![2021-11-4 010057](assets/images/README/20211109065823.svg)  ![2021-11-4 010057](assets/images/README/20211109065823.svg)  ![2021-11-4 010206](assets/images/README/20211109065714.svg)  ![2021-11-4 010317](assets/images/README/20211109065451.svg)
 
 
 
@@ -277,6 +276,14 @@
 ## ✨ Deploy ETH Line Node
 
 > If you want to deploy a set of your own `ETH Line Node`, please read the documentation carefully, it may be a bit complicated, but it is simple.
+>
+> **ENV**: [Centos 8](https://www.centos.org/download/) | [Java : JDK17 - JDK-18-internal](./docs/JDK.md) 
+>
+> [Deployment document](./docs/deploy-eth-line-node.md)
+
+
+
+
 
 
 
