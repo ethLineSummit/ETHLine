@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.file";
+option java_outer_classname = "FileProto";
+
+import  "v1/core/payload.proto";
+import  "v1/core/result.proto";
+
+
+// file upload and download
+service FileService {
+  // qrCode Image
+  rpc qrCode (PayloadWrap) returns (ResultPayload) {};
+}

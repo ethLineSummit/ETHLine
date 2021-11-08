@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.broadcast";
+option java_outer_classname = "PingProto";
+//option objc_class_prefix = "PING";
+
+//package broadcast;
+
+
+// ntp clock synchronization
+service PingService {
+  // Sends a greeting
+  rpc ServerInfo (PingRequest) returns (PingResponse) {}
+}
+
+message PingRequest {
+  //
+  string message = 1;
+
+  // The local time when the client initiated the tcp request
+  int64 timestamp = 2;
+
+}
+
+message PingResponse {
+  //
+  string message = 1;
+
+  // The local time when the server received the tcp request
+  int64 handle_timestamp = 2;
+
+  // The local time when the server responded to the tcp request
+  int64 timestamp = 3;
+
+  // server unique id
+  string serviceId = 4;
+
+  // server : public Key
+  bytes public_key = 5;
+
+  string sign = 6;
+}
+
+// NTP
+// client --------T1--------------------T4------------
+//                |\                    /|
+//                | \                  / |
+//                |  \                /  |
+//                |   \              /   |
+//                |    \            /    |
+//                |     \          /     |
+//                |--D1--\        /--D2--|
+// server --------T1+T----T2----T3-------T4+T---------
+// if D1==D2 AND T=serverTime-clientTime
+// THEN T2=T1+T+D1 AND T4+T=T3+D2
+// THEN T2-T4-T=T1+T-T3 => T=((T2-T1)-(T4-T3))/2 AND D1=D2=((T2-T1)+(T4-T3))/2

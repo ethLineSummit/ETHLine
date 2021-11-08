@@ -44,7 +44,8 @@ OpenJDK Runtime Environment (build 18-internal+0-adhoc.root.jdk)
 OpenJDK 64-Bit Server VM (build 18-internal+0-adhoc.root.jdk, mixed mode, sharing)
 [root@cloud jdk-18-internal-2021-11-03]# date
 Wed Nov  3 09:33:58 UTC 2021
-
+[root@cloud ~]# sha512sum jdk-18-internal-2021-11-03.zip
+c199ae4557aab6d9ca7e661fa0f00a34cf2013180363f8c8bbe5fbd811c6c54d31b5d4225b9f950a713358a17c89cb29c2256a19d202a1a20488852a02111603  jdk-18-internal-2021-11-03.zip
 ```
 
 

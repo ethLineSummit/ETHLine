@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.token";
+option java_outer_classname = "TokenProto";
+
+import  "v1/core/payload.proto";
+import  "v1/core/result.proto";
+
+
+service TokenService {
+  // ECDH
+  rpc handshake (TokenRequest) returns (TokenResponse) {}
+  // live
+  rpc live (PayloadWrap) returns (ResultPayload){}
+}
+
+
+message TokenRequest {
+
+  // client public key : for ECDH
+  bytes public_key = 1;
+
+  // encrypted string : expect server time
+  // message = {"expectTime":"1635238708013","seed","xxxx"}
+  bytes message = 2;
+
+}
+
+
+message TokenResponse{
+
+  // encrypted string
+  // {"token":"xxxxx"}
+  bytes data = 1;
+
+  // token survival time
+  int64 survival_time = 2;
+
+  // server seed
+  bytes seed = 3;
+
+  //
+  int32 code = 4;
+}

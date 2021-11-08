@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.line";
+option java_outer_classname = "ChatLineProto";
+
+import  "v1/core/payload.proto";
+import  "v1/core/result.proto";
+
+
+service ChatLineService {
+
+  // transfer message by service
+  rpc transferChatMessage (PayloadWrap) returns (ResultPayload) {}
+
+  // get all the messages I send
+  rpc sendChatMessage (PayloadWrap) returns (stream ChatMessageResultPayload){}
+
+  // get all the messages I receive
+  rpc receiveChatMessage(PayloadWrap) returns (stream ChatMessageResultPayload){}
+
+  // get all messages of the specified channel
+  rpc historyChatMessage(PayloadWrap) returns (stream ChatMessageResultPayload){}
+
+}
+
+// one chat message
+message  ChatMessageWrap{
+
+  // message uuid
+  int64 uuid = 1;
+
+  // the timestamp when the server received this message
+  int64 timestamp = 2;
+
+  // End-to-end encrypted messages
+  Payload payload = 3;
+
+  // send : 0  | receive :1
+  int32 type = 4;
+
+  // the other party's address | attach the address when returning a multi-person message
+  string address = 5;
+
+}
+
+// chat message list
+message ChatMessageResultPayload{
+  // List of all ChatMessageWrap
+  repeated ChatMessageWrap messages = 1;
+  // result status code
+  int64 code = 2;
+}
+
+

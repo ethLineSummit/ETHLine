@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.broadcast";
+option java_outer_classname = "AppProto";
+
+import  "v1/core/result.proto";
+
+
+// app service
+service AppService {
+  // app version apk release
+  rpc AndroidInfo (ResultPayload) returns (ResultPayload) {}
+}

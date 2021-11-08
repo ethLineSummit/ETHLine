@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.line";
+option java_outer_classname = "AddressProto";
+
+import  "v1/core/payload.proto";
+
+
+service AddressService {
+  // Request all online wallet addresses
+  rpc online (PayloadWrap) returns (stream PayloadWrap) {}
+}
+
+

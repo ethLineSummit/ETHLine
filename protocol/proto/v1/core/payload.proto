@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "eth.line.proto.v1.core";
+option java_outer_classname = "PayloadProto";
+
+// payload type
+enum Type {
+  UNKNOWN = 0;
+  JSON = 1;
+  TEXT = 2;
+  FILE = 3;
+}
+
+enum EncryptionType{
+  // most data is encrypted using aes
+  AES_256_CBC = 0;
+  //
+  NONE = 1;
+  // stream for file
+  RABBIT = 2;
+  // unable to determine encryption method
+  SHADOW = 3;
+}
+
+message  Payload {
+  // data type
+  Type type = 1;
+  // data encryption type
+  EncryptionType encryption_type = 2;
+  // payload
+  bytes data = 3;
+}
+
+
+message PayloadWrap{
+  // for server
+  Payload identity = 1;
+  // for server
+  string token = 2;
+  // payload
+  Payload data = 3;
+  int64 timestamp = 4;
+}
